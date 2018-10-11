@@ -20,8 +20,9 @@ import java.util.Map;
 public class ExcelTransFormer {
     private List<Map<String, String>> dataList=new ArrayList<>();
 
-    ExcelTransFormer() {
-        initTestData();
+    ExcelTransFormer(List<Map<String, String>> dataList) {
+        this.dataList=dataList;
+        //initTestData();
     }
 
     void initTestData() {
@@ -34,12 +35,8 @@ public class ExcelTransFormer {
         dataList.add(m);
     }
 
-    public static void main(String[] args) throws IOException {
-        ExcelTransFormer x = new ExcelTransFormer();
-        x.ExcelTransFormer2();
-    }
 
-    public void ExcelTransFormer2() throws IOException {
+    public void ExcelTransFormer() throws IOException {
         HSSFWorkbook wkb = new HSSFWorkbook();
         HSSFSheet sheet = wkb.createSheet("zhuoyue2019");//建立新的sheet对象（excel的表单）
 

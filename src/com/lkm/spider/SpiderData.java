@@ -18,18 +18,23 @@ public class SpiderData {
     private static String SEARCH_URL = "http://book.duxiu.com/search?";
     private String loginBody;
     private String keyWord;
+    private Connection con;
     private Map<String, String> cookie = null;
 
     SpiderData(Map<String, String> cookie, String loginBody) {
         this.cookie = cookie;
         this.loginBody = loginBody;
+        if(con==null){
+            con = Jsoup.connect(SEARCH_URL);
+        }
     }
 
     public String getKeyWord() {
         return keyWord;
     }
 
-    public Map<String, String> spiderDataByOneWord(String keyWord, String year) throws IOException {
+    public Map<String, String> spiderDataByOneWord(String keyWord, String year) throws IOException, InterruptedException {
+        Thread.sleep(1000);
         this.keyWord=keyWord;
         Document doc = Jsoup.parse(loginBody);
         Map<String, String> datas = new HashMap<>();
@@ -51,10 +56,15 @@ public class SpiderData {
                 datas.put("sectyear",year);
             }
         }
-        Connection con = Jsoup.connect(SEARCH_URL);
         Response result = con.ignoreContentType(true).method(Method.GET)
                 .data(datas).cookies(cookie).execute();
+        System.out.println(result.url());
         Document finalDoc = Jsoup.parse(result.body());
+        if(result.body().contains("viewport")){
+            System.out.println("任务停止,请迅速验证");
+            Thread.sleep(20000);
+            System.out.println("===="+keyWord+"触发脚本验证");
+        }
         return convertToMap(finalDoc);
     }
 
