@@ -20,6 +20,7 @@ public class SpiderData {
     private String keyWord;
     private Connection con;
     private Map<String, String> cookie = null;
+    private int i=0;
 
     SpiderData(Map<String, String> cookie, String loginBody) {
         this.cookie = cookie;
@@ -33,8 +34,8 @@ public class SpiderData {
         return keyWord;
     }
 
-    public Map<String, String> spiderDataByOneWord(String keyWord, String year) throws IOException, InterruptedException {
-        Thread.sleep(1000);
+    public Map<String, String> spiderDataByOneWord(String keyWord, String year) throws IOException, AntiSpriderException {
+        //Thread.sleep(1000);
         this.keyWord=keyWord;
         Document doc = Jsoup.parse(loginBody);
         Map<String, String> datas = new HashMap<>();
@@ -62,8 +63,9 @@ public class SpiderData {
         Document finalDoc = Jsoup.parse(result.body());
         if(result.body().contains("viewport")){
             System.out.println("任务停止,请迅速验证");
-            Thread.sleep(20000);
             System.out.println("===="+keyWord+"触发脚本验证");
+            AntiSpriderException ae=new AntiSpriderException("捕捉到验证异常,请手工处理");
+            throw ae;
         }
         return convertToMap(finalDoc);
     }

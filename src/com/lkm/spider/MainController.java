@@ -5,18 +5,30 @@ import java.util.*;
 
 public class MainController {
     public static void main(String[] args) throws IOException, InterruptedException {
-        String[] name = {"孔子","莎士比亚","列夫·托尔斯泰","李清照"};
+        int totalCount=0;
+        int spiderCount=0;
+        String[] finish={"孔子","莎士比亚","列夫·托尔斯泰","李清照","鲁迅","安徒生"};
+        String[] name = {"孔子","莎士比亚","列夫·托尔斯泰","李清照","鲁迅","安徒生","普希金", "狄更斯","乔伊斯","马克吐温"};
         List<Map<String, String>> dataList = new ArrayList<>();
+        try{
+
         LoginCookieUtil login = new LoginCookieUtil();
         if (login.getCookie() == null || login.getLoginBody() == null) {
             System.out.println("获取COOKIE失败,请检查验证配置及网络");
             return;
         }
         for (String keyWOrd : name) {
-            Thread.sleep(2000);
+            //Thread.sleep(2000);
             Map<String, String> lastMap = new HashMap<>();
             lastMap.put("name", keyWOrd);
             SpiderData parker = new SpiderData(login.getCookie(), login.getLoginBody());
+            totalCount++;
+            spiderCount++;
+            if(spiderCount==1){
+                System.out.println("休息10秒");
+                Thread.sleep(10000);
+                spiderCount=0;
+            }
             Map<String, String> resultMap = parker.spiderDataByOneWord(keyWOrd, "");
             //System.out.println(resultMap.toString());
             Iterator itr = resultMap.entrySet().iterator();
@@ -31,6 +43,13 @@ public class MainController {
                     int end = Integer.parseInt(key.split("-")[1]);
                     for (int i = start; i < end+1; i++) {
                         SpiderData parker2 = new SpiderData(login.getCookie(), login.getLoginBody());
+                        totalCount++;
+                        spiderCount++;
+                        if(spiderCount==1){
+                            System.out.println("休息10秒");
+                            Thread.sleep(10000);
+                            spiderCount=0;
+                        }
                         Map<String, String> yearMap = parker2.spiderDataByOneWord(keyWOrd, String.valueOf(i));
                         System.out.println(String.valueOf(i) + "====OK=="+yearMap.get(key));
                         lastMap.put(String.valueOf(i), yearMap.get(key));
@@ -43,8 +62,12 @@ public class MainController {
             System.out.println(lastMap.toString());
             dataList.add(lastMap);
         }
-        ExcelTransFormer e = new ExcelTransFormer(dataList);
-        e.ExcelTransFormer();
-
-    }
+    }catch(AntiSpriderException antiSpriderException){
+            antiSpriderException.printStackTrace();
+    }finally {
+            System.out.println("总请求数:"+totalCount);
+            ExcelTransFormer e = new ExcelTransFormer(dataList);
+            e.ExcelTransFormer();
+     }
+}
 }

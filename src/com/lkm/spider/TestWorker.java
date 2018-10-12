@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class TestWorker {
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws IOException, InterruptedException, AntiSpriderException {
         String keyWOrd ="孔子";
         List<Map<String, String>> dataList = new ArrayList<>();
         LoginCookieUtil login = new LoginCookieUtil();
