@@ -74,4 +74,35 @@ public class ExcelTransFormer {
         }
 
     }
+
+    public void ExcelTransFormer4Total() throws IOException {
+        HSSFWorkbook wkb = new HSSFWorkbook();
+        HSSFSheet sheet = wkb.createSheet("zhuoyue2019");//建立新的sheet对象（excel的表单）
+
+        HSSFRow row1 = sheet.createRow(0);//在sheet里创建第一行，参数为行索引(excel的行)，可以是0～65535之间的任何一个
+        HSSFCell cell = row1.createCell((short) 0);//创建单元格（excel的单元格，参数为列索引，可以是0～255之间的任何一个
+        cell.setCellValue("");//设置单元格内容
+        HSSFCell tempcell = row1.createCell((short) (1));
+        tempcell.setCellValue("1912-2008");
+        for (int i=0;i<dataList.size();i++) {
+            Map<String, String> temp=dataList.get(i);
+            HSSFRow row2 = sheet.createRow(i+1);//在sheet里创建第一行，参数为行索引(excel的行)，可以是0～65535之间的任何一个
+            HSSFCell cell2 = row2.createCell((short) 0);//创建单元格（excel的单元格，参数为列索引，可以是0～255之间的任何一个
+            cell2.setCellValue(temp.get("name"));//设置单元格内容
+            HSSFCell tempcell2 = row2.createCell((short)1);
+            String tempvalue=temp.get("1912-2008");
+            if(tempvalue==null||tempvalue==""){
+                tempvalue="0";
+            }
+            tempcell2.setCellValue(tempvalue);
+        }
+        File file = new File("D:\\zhuoyue2019.xls");
+        try {
+            file.createNewFile();
+            FileOutputStream stream = FileUtils.openOutputStream(file);
+            wkb.write(stream);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
 }

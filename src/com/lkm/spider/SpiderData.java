@@ -67,7 +67,8 @@ public class SpiderData {
             AntiSpriderException ae=new AntiSpriderException("捕捉到验证异常,请手工处理");
             throw ae;
         }
-        return convertToMap(finalDoc);
+        //return convertToMap(finalDoc);
+        return convertToMap4Total(finalDoc);
     }
 
     public Map<String,String> convertToMap(Document finalDoc){
@@ -95,6 +96,16 @@ public class SpiderData {
             String number=temp.split("\\(")[1].replace(")","");
             retMap.put(year,number);
         }
+        return retMap;
+    }
+
+    public Map<String,String> convertToMap4Total(Document finalDoc){
+        Map<String,String> retMap=new HashMap();
+        List<Element> yearTree = finalDoc.select(".find_top").select(".leftF");
+        Element es = yearTree.get(0);
+        String esString=es.toString();
+        String total=esString.split("种")[0].split("</font>")[1].trim();
+        retMap.put("1912-2008",total);
         return retMap;
     }
 }
