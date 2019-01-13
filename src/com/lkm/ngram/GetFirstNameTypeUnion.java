@@ -9,9 +9,13 @@ import java.util.List;
  */
 public class GetFirstNameTypeUnion {
     public static void main(String[] args) throws IOException {
+        long startTime=System.currentTimeMillis();
         String[] filename={"画家","书法家","文学家"};
         String str="";//每行的内容
         List<NgramDto> l=new ArrayList<>();
+        List<NgramDto> searchList=new ArrayList<>();
+        List<String> nameList=new ArrayList<>();
+        List<String> nameZHList=new ArrayList<>();
         for(String s:filename){
             String url="D:\\zhuoyue"+"\\"+s+".txt";
             File temp=new File(url);
@@ -26,6 +30,11 @@ public class GetFirstNameTypeUnion {
                         prefix=String.valueOf(c)+String.valueOf(str.charAt(p+1));
                         prefix=prefix.toLowerCase();
                         firstname+=String.valueOf(c);
+                        NgramDto searchDto=new NgramDto();
+                        searchDto.setPrefix(prefix);
+                        searchDto.setSearchWord(str.substring(p));
+                        searchDto.setZhName(str.substring(0,p).trim());
+                        searchList.add(searchDto);
                         for(int z=1;z<100;z++){
                             if(!Character.isSpace(str.charAt(p+z))){
                                 firstname+=String.valueOf(str.charAt(p+z));
@@ -60,7 +69,14 @@ public class GetFirstNameTypeUnion {
 
         //DownLoadNgramData d=new DownLoadNgramData();
         //d.download(l);
-        System.out.println(l.size());
+        //System.out.println(l.size());
+        //CreateDataBase c=new CreateDataBase();
+        //c.createDataBase(l);
+        TransFinalData t=new TransFinalData();
+        t.transFinalData(searchList);
+
+        long endTime=System.currentTimeMillis(); //获取结束时间
+        System.out.println("程序运行时间： "+(endTime-startTime)+"ms");
 
     }
 

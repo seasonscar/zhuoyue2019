@@ -11,5 +11,6 @@
     <orderEntry type="library" name="commons-io-2.5" level="project" />
     <orderEntry type="library" name="poi-3.0-FINAL" level="project" />
     <orderEntry type="library" name="ojdbc14" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-5.1.16" level="project" />
   </component>
 </module>
