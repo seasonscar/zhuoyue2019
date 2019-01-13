@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efa4fa73-3fda-48e0-9163-6b8f677e1992" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/commons_io_2_5.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/poi_3_0_FINAL.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/lkm/spider/LoginGoogleUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/lkm/spider/TestWorker.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/ojdbc14.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/lkm/ngram/DownLoadNgramData.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/lkm/ngram/GetFirstNameTypeUnion.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/lkm/ngram/NgramDto.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jsoup_1_11_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/jsoup_1_11_3.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/zhuoyue2019/com/lkm/spider/ExcelTransFormer.class" afterPath="$PROJECT_DIR$/out/production/zhuoyue2019/com/lkm/spider/ExcelTransFormer.class" />
       <change beforePath="$PROJECT_DIR$/out/production/zhuoyue2019/com/lkm/spider/MainController.class" afterPath="$PROJECT_DIR$/out/production/zhuoyue2019/com/lkm/spider/MainController.class" />
       <change beforePath="$PROJECT_DIR$/out/production/zhuoyue2019/com/lkm/spider/SpiderData.class" afterPath="$PROJECT_DIR$/out/production/zhuoyue2019/com/lkm/spider/SpiderData.class" />
-      <change beforePath="$PROJECT_DIR$/src/com/lkm/spider/ExcelTransFormer.java" afterPath="$PROJECT_DIR$/src/com/lkm/spider/ExcelTransFormer.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/zhuoyue2019/com/lkm/spider/TestWorker.class" afterPath="$PROJECT_DIR$/out/production/zhuoyue2019/com/lkm/spider/TestWorker.class" />
       <change beforePath="$PROJECT_DIR$/src/com/lkm/spider/MainController.java" afterPath="$PROJECT_DIR$/src/com/lkm/spider/MainController.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/lkm/spider/SpiderData.java" afterPath="$PROJECT_DIR$/src/com/lkm/spider/SpiderData.java" />
       <change beforePath="$PROJECT_DIR$/zhuoyue2019.iml" afterPath="$PROJECT_DIR$/zhuoyue2019.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,10 +28,9 @@
       <file leaf-file-name="LoginCookieUtil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/LoginCookieUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1499">
-              <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+            <state relative-caret-position="348">
+              <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#792#793#0" expanded="true" />
                 <element signature="e#821#822#0" expanded="true" />
                 <element signature="e#857#858#0" expanded="true" />
@@ -43,7 +43,7 @@
       <file leaf-file-name="LoginGoogleUtil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/LoginGoogleUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
+            <state relative-caret-position="1334">
               <caret line="50" column="45" lean-forward="false" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -54,33 +54,75 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExcelTransFormer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/ExcelTransFormer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="67" column="13" lean-forward="true" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Proxy.java" pinned="false" current-in-tab="false">
-        <entry file="jar://E:/JDK7 X64/src.zip!/java/net/Proxy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2001">
-              <caret line="92" column="11" lean-forward="false" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+            <state relative-caret-position="29">
+              <caret line="81" column="34" lean-forward="false" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileInputStream.java" pinned="false" current-in-tab="false">
+        <entry file="jar://E:/JDK7 X64/src.zip!/java/io/FileInputStream.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="145" column="0" lean-forward="false" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetFirstNameTypeUnion.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/lkm/ngram/GetFirstNameTypeUnion.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="406">
+              <caret line="78" column="31" lean-forward="false" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2091#2099#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DownLoadNgramData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/lkm/ngram/DownLoadNgramData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1591">
+              <caret line="58" column="5" lean-forward="false" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="String.java" pinned="false" current-in-tab="false">
+        <entry file="jar://E:/JDK7 X64/src.zip!/java/lang/String.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="2790" column="25" lean-forward="false" selection-start-line="2790" selection-start-column="25" selection-end-line="2790" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NgramDto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/lkm/ngram/NgramDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+              <folding>
+                <element signature="e#166#167#0" expanded="true" />
+                <element signature="e#195#196#0" expanded="true" />
+                <element signature="e#237#238#0" expanded="true" />
+                <element signature="e#269#270#0" expanded="true" />
+                <element signature="e#325#326#0" expanded="true" />
+                <element signature="e#367#368#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,25 +131,10 @@
       <file leaf-file-name="SpiderData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/SpiderData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-319">
-              <caret line="37" column="29" lean-forward="true" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+            <state relative-caret-position="2668">
+              <caret line="106" column="54" lean-forward="false" selection-start-line="106" selection-start-column="54" selection-end-line="106" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#830#831#0" expanded="true" />
-                <element signature="e#860#861#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Jsoup.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Desktop/jsoup-1.11.3.jar!/org/jsoup/Jsoup.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="35" column="29" lean-forward="false" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-              <folding>
-                <element signature="e#923#924#0" expanded="true" />
-                <element signature="e#973#974#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,46 +143,11 @@
       <file leaf-file-name="TestWorker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/TestWorker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
+            <state relative-caret-position="493">
               <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Connection.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Desktop/jsoup-1.11.3.jar!/org/jsoup/Connection.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="57" column="15" lean-forward="false" selection-start-line="57" selection-start-column="15" selection-end-line="57" selection-end-column="15" />
-              <folding>
-                <marker date="1539062227219" expanded="false" signature="0:104" ph="/.../" />
-                <marker date="1539062227219" expanded="false" signature="133:439" ph="..." />
-                <marker date="1539062227219" expanded="true" signature="966:984" ph="/**...*/" />
-                <marker date="1539062227219" expanded="true" signature="2141:2500" ph="{...}" />
-                <marker date="1539062227219" expanded="true" signature="2577:2937" ph="{...}" />
-                <marker date="1539062227219" expanded="true" signature="3012:4198" ph="{...}" />
-                <marker date="1539062227219" expanded="true" signature="3592:3610" ph="/**...*/" />
-                <marker date="1539062227219" expanded="true" signature="3663:3681" ph="/**...*/" />
-                <marker date="1539062227219" expanded="true" signature="4253:4993" ph="{...}" />
-                <marker date="1539062227219" expanded="true" signature="5025:5416" ph="{...}" />
-                <marker date="1539062227219" expanded="false" signature="5277:5292" ph=" { " />
-                <marker date="1539062227219" expanded="false" signature="5315:5325" ph=" }" />
-                <marker date="1539062227219" expanded="false" signature="5365:5380" ph=" { " />
-                <marker date="1539062227219" expanded="false" signature="5400:5410" ph=" }" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HttpConnection.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Desktop/jsoup-1.11.3.jar!/org/jsoup/helper/HttpConnection.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="205" column="22" lean-forward="false" selection-start-line="205" selection-start-column="22" selection-end-line="205" selection-end-column="22" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -173,6 +165,9 @@
     <findStrings>
       <find>孔子</find>
       <find>sleep</find>
+      <find>储光羲</find>
+      <find>郑道昭</find>
+      <find>王寂</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -188,10 +183,16 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/lkm/spider/LoginCookieUtil.java" />
         <option value="$PROJECT_DIR$/src/com/lkm/spider/LoginGoogleUtil.java" />
-        <option value="$PROJECT_DIR$/src/com/lkm/spider/ExcelTransFormer.java" />
         <option value="$PROJECT_DIR$/src/com/lkm/spider/TestWorker.java" />
-        <option value="$PROJECT_DIR$/src/com/lkm/spider/MainController.java" />
         <option value="$PROJECT_DIR$/src/com/lkm/spider/SpiderData.java" />
+        <option value="$PROJECT_DIR$/src/com/lkm/spider/ExcelTransFormer.java" />
+        <option value="$PROJECT_DIR$/src/com/lkm/spider/MainController.java" />
+        <option value="$PROJECT_DIR$/src/com/lkm/ngram/getFirstNameTypeUnion.java" />
+        <option value="$PROJECT_DIR$/src/com/lkm/ngram/ngramDto.java" />
+        <option value="$PROJECT_DIR$/src/com/lkm/ngram/DownLoadNgramDat.java" />
+        <option value="$PROJECT_DIR$/src/com/lkm/ngram/NgramDto.java" />
+        <option value="$PROJECT_DIR$/src/com/lkm/ngram/DownLoadNgramData.java" />
+        <option value="$PROJECT_DIR$/src/com/lkm/ngram/GetFirstNameTypeUnion.java" />
       </list>
     </option>
   </component>
@@ -202,8 +203,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="580" />
-    <option name="y" value="195" />
+    <option name="x" value="839" />
+    <option name="y" value="166" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -237,57 +238,34 @@
             </path>
             <path>
               <item name="zhuoyue2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhuoyue2019" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhuoyue2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhuoyue2019" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lkm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhuoyue2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhuoyue2019" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lkm" type="462c0819:PsiDirectoryNode" />
-              <item name="spider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhuoyue2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhuoyue2019" type="462c0819:PsiDirectoryNode" />
-              <item name="commons-io-2.5.jar" type="ab9368bb:PsiFileNode" />
-            </path>
-            <path>
-              <item name="zhuoyue2019" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/poi-3.0-FINAL.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ojdbc14.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.lkm.spider" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\GitHub\zhuoyue2019\src\com\lkm\ngram" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -302,13 +280,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MainController">
+  <component name="RunManager" selected="Application.GetFirstNameTypeUnion">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
+    </configuration>
+    <configuration name="GetFirstNameTypeUnion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.lkm.ngram.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.lkm.ngram.GetFirstNameTypeUnion" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="zhuoyue2019" />
+      <envs />
     </configuration>
     <configuration name="LoginGoogleUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -460,18 +457,20 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.SpiderData" />
       <item index="1" class="java.lang.String" itemvalue="Application.MainController" />
       <item index="2" class="java.lang.String" itemvalue="Application.LoginGoogleUtil" />
       <item index="3" class="java.lang.String" itemvalue="Application.TestWorker" />
+      <item index="4" class="java.lang.String" itemvalue="Application.GetFirstNameTypeUnion" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.MainController" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TestWorker" />
-        <item index="2" class="java.lang.String" itemvalue="Application.LoginGoogleUtil" />
-        <item index="3" class="java.lang.String" itemvalue="Application.SpiderData" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.GetFirstNameTypeUnion" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MainController" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TestWorker" />
+        <item index="3" class="java.lang.String" itemvalue="Application.LoginGoogleUtil" />
+        <item index="4" class="java.lang.String" itemvalue="Application.SpiderData" />
       </list>
     </recent_temporary>
   </component>
@@ -498,11 +497,24 @@
       <workItem from="1539264400856" duration="61000" />
       <workItem from="1539267624665" duration="2429000" />
       <workItem from="1539270179481" duration="9260000" />
+      <workItem from="1539353486077" duration="1422000" />
+      <workItem from="1539355078379" duration="4790000" />
+      <workItem from="1539359908476" duration="734000" />
+      <workItem from="1539436355797" duration="1210000" />
+      <workItem from="1539444780399" duration="5615000" />
+      <workItem from="1539481249250" duration="635000" />
+      <workItem from="1540392661527" duration="6701000" />
+      <workItem from="1540604484038" duration="2711000" />
+      <workItem from="1540711515108" duration="2857000" />
+      <workItem from="1540734677717" duration="1806000" />
+      <workItem from="1541783268876" duration="9000" />
+      <workItem from="1543625149252" duration="1123000" />
+      <workItem from="1547337971130" duration="7216000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25765000" />
+    <option name="totallyTimeSpent" value="62594000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="2578" height="1408" extended-state="6" />
@@ -516,19 +528,19 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4446241" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4268391" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983023" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17332268" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18290734" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39935327" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6063056" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -553,90 +565,17 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/lkm/spider/SpiderData.java</url>
-          <line>95</line>
+          <url>file://$PROJECT_DIR$/src/com/lkm/ngram/DownLoadNgramData.java</url>
+          <line>38</line>
           <properties />
-          <option name="timeStamp" value="29" />
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="30" />
+      <option name="time" value="39" />
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="temp.split(&quot;\\(&quot;)" />
-        <watch expression="result.body()" />
-      </configuration>
-    </watches-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/SpiderData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Desktop/jsoup-1.11.3.jar!/org/jsoup/Connection.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1508">
-          <caret line="65" column="15" lean-forward="false" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="15" />
-          <folding>
-            <marker date="1539062227219" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1539062227219" expanded="false" signature="133:439" ph="..." />
-            <marker date="1539062227219" expanded="true" signature="966:984" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="2141:2500" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="2577:2937" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="3012:4198" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="3592:3610" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="3663:3681" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="4253:4993" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="5025:5416" ph="{...}" />
-            <marker date="1539062227219" expanded="false" signature="5277:5292" ph=" { " />
-            <marker date="1539062227219" expanded="false" signature="5315:5325" ph=" }" />
-            <marker date="1539062227219" expanded="false" signature="5365:5380" ph=" { " />
-            <marker date="1539062227219" expanded="false" signature="5400:5410" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/LoginGoogleUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1450">
-          <caret line="50" column="45" lean-forward="false" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#946#947#0" expanded="true" />
-            <element signature="e#1001#1002#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/LoginCookieUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1276">
-          <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
-            <element signature="e#821#822#0" expanded="true" />
-            <element signature="e#857#858#0" expanded="true" />
-            <element signature="e#889#890#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhuoyue2019.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -658,7 +597,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10759">
           <caret line="371" column="10" lean-forward="false" selection-start-line="371" selection-start-column="10" selection-end-line="371" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -666,7 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18386">
           <caret line="634" column="0" lean-forward="false" selection-start-line="634" selection-start-column="0" selection-end-line="634" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -676,35 +613,11 @@
           <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Desktop/jsoup-1.11.3.jar!/org/jsoup/Connection.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1508">
-          <caret line="65" column="15" lean-forward="false" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="15" />
-          <folding>
-            <marker date="1539062227219" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1539062227219" expanded="false" signature="133:439" ph="..." />
-            <marker date="1539062227219" expanded="true" signature="966:984" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="2141:2500" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="2577:2937" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="3012:4198" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="3592:3610" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="3663:3681" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="4253:4993" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="5025:5416" ph="{...}" />
-            <marker date="1539062227219" expanded="false" signature="5277:5292" ph=" { " />
-            <marker date="1539062227219" expanded="false" signature="5315:5325" ph=" }" />
-            <marker date="1539062227219" expanded="false" signature="5365:5380" ph=" { " />
-            <marker date="1539062227219" expanded="false" signature="5400:5410" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/Desktop/jsoup-1.11.3.jar!/org/jsoup/Connection.class" />
     <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/LoginGoogleUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1015">
@@ -722,7 +635,6 @@
         <state relative-caret-position="1276">
           <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#792#793#0" expanded="true" />
             <element signature="e#821#822#0" expanded="true" />
             <element signature="e#857#858#0" expanded="true" />
@@ -759,7 +671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10759">
           <caret line="371" column="10" lean-forward="false" selection-start-line="371" selection-start-column="10" selection-end-line="371" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -767,7 +678,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18386">
           <caret line="634" column="0" lean-forward="false" selection-start-line="634" selection-start-column="0" selection-end-line="634" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -777,35 +687,11 @@
           <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Desktop/jsoup-1.11.3.jar!/org/jsoup/Connection.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1508">
-          <caret line="65" column="15" lean-forward="false" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="15" />
-          <folding>
-            <marker date="1539062227219" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1539062227219" expanded="false" signature="133:439" ph="..." />
-            <marker date="1539062227219" expanded="true" signature="966:984" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="2141:2500" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="2577:2937" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="3012:4198" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="3592:3610" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="3663:3681" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="4253:4993" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="5025:5416" ph="{...}" />
-            <marker date="1539062227219" expanded="false" signature="5277:5292" ph=" { " />
-            <marker date="1539062227219" expanded="false" signature="5315:5325" ph=" }" />
-            <marker date="1539062227219" expanded="false" signature="5365:5380" ph=" { " />
-            <marker date="1539062227219" expanded="false" signature="5400:5410" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/Desktop/jsoup-1.11.3.jar!/org/jsoup/Connection.class" />
     <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/LoginGoogleUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1363">
@@ -823,7 +709,6 @@
         <state relative-caret-position="928">
           <caret line="47" column="42" lean-forward="false" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#792#793#0" expanded="true" />
             <element signature="e#821#822#0" expanded="true" />
             <element signature="e#857#858#0" expanded="true" />
@@ -849,37 +734,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Desktop/jsoup-1.11.3.jar!/org/jsoup/Connection.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1508">
-          <caret line="65" column="15" lean-forward="false" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="15" />
-          <folding>
-            <marker date="1539062227219" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1539062227219" expanded="false" signature="133:439" ph="..." />
-            <marker date="1539062227219" expanded="true" signature="966:984" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="2141:2500" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="2577:2937" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="3012:4198" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="3592:3610" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="3663:3681" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="4253:4993" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="5025:5416" ph="{...}" />
-            <marker date="1539062227219" expanded="false" signature="5277:5292" ph=" { " />
-            <marker date="1539062227219" expanded="false" signature="5315:5325" ph=" }" />
-            <marker date="1539062227219" expanded="false" signature="5365:5380" ph=" { " />
-            <marker date="1539062227219" expanded="false" signature="5400:5410" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/Desktop/jsoup-1.11.3.jar!/org/jsoup/Connection.class" />
     <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/SpiderData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2088">
           <caret line="72" column="9" lean-forward="false" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -889,7 +750,6 @@
         <state relative-caret-position="928">
           <caret line="47" column="42" lean-forward="false" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#792#793#0" expanded="true" />
             <element signature="e#821#822#0" expanded="true" />
             <element signature="e#857#858#0" expanded="true" />
@@ -915,37 +775,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Desktop/jsoup-1.11.3.jar!/org/jsoup/Connection.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1508">
-          <caret line="65" column="15" lean-forward="false" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="15" />
-          <folding>
-            <marker date="1539062227219" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1539062227219" expanded="false" signature="133:439" ph="..." />
-            <marker date="1539062227219" expanded="true" signature="966:984" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="2141:2500" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="2577:2937" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="3012:4198" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="3592:3610" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="3663:3681" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="4253:4993" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="5025:5416" ph="{...}" />
-            <marker date="1539062227219" expanded="false" signature="5277:5292" ph=" { " />
-            <marker date="1539062227219" expanded="false" signature="5315:5325" ph=" }" />
-            <marker date="1539062227219" expanded="false" signature="5365:5380" ph=" { " />
-            <marker date="1539062227219" expanded="false" signature="5400:5410" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/Desktop/jsoup-1.11.3.jar!/org/jsoup/Connection.class" />
     <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/SpiderData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2088">
           <caret line="72" column="9" lean-forward="true" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -955,7 +791,6 @@
         <state relative-caret-position="928">
           <caret line="47" column="42" lean-forward="false" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#792#793#0" expanded="true" />
             <element signature="e#821#822#0" expanded="true" />
             <element signature="e#857#858#0" expanded="true" />
@@ -981,37 +816,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Desktop/jsoup-1.11.3.jar!/org/jsoup/Connection.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1508">
-          <caret line="65" column="15" lean-forward="false" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="15" />
-          <folding>
-            <marker date="1539062227219" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1539062227219" expanded="false" signature="133:439" ph="..." />
-            <marker date="1539062227219" expanded="true" signature="966:984" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="2141:2500" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="2577:2937" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="3012:4198" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="3592:3610" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="3663:3681" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="4253:4993" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="5025:5416" ph="{...}" />
-            <marker date="1539062227219" expanded="false" signature="5277:5292" ph=" { " />
-            <marker date="1539062227219" expanded="false" signature="5315:5325" ph=" }" />
-            <marker date="1539062227219" expanded="false" signature="5365:5380" ph=" { " />
-            <marker date="1539062227219" expanded="false" signature="5400:5410" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/Desktop/jsoup-1.11.3.jar!/org/jsoup/Connection.class" />
     <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/SpiderData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2059">
           <caret line="71" column="27" lean-forward="false" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1034,7 +845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10092">
           <caret line="371" column="10" lean-forward="false" selection-start-line="371" selection-start-column="10" selection-end-line="371" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1042,7 +852,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17429">
           <caret line="634" column="0" lean-forward="false" selection-start-line="634" selection-start-column="0" selection-end-line="634" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1050,6 +859,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="40" column="22" lean-forward="false" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/ExcelTransFormer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1885">
+          <caret line="77" column="61" lean-forward="false" selection-start-line="77" selection-start-column="61" selection-end-line="77" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -1062,28 +878,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Desktop/jsoup-1.11.3.jar!/org/jsoup/Jsoup.class">
+    <entry file="jar://$USER_HOME$/Desktop/jsoup-1.11.3.jar!/org/jsoup/Jsoup.class" />
+    <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/TestWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="35" column="29" lean-forward="false" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+        <state relative-caret-position="493">
+          <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
           <folding>
-            <element signature="e#923#924#0" expanded="true" />
-            <element signature="e#973#974#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/ExcelTransFormer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="67" column="13" lean-forward="true" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/Desktop/jsoup-1.11.3.jar!/org/jsoup/Connection.class" />
+    <entry file="jar://$USER_HOME$/Desktop/jsoup-1.11.3.jar!/org/jsoup/helper/HttpConnection.class" />
     <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/LoginGoogleUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
+        <state relative-caret-position="1334">
           <caret line="50" column="45" lean-forward="false" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1093,43 +903,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Desktop/jsoup-1.11.3.jar!/org/jsoup/helper/HttpConnection.class">
+    <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/SpiderData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="205" column="22" lean-forward="false" selection-start-line="205" selection-start-column="22" selection-end-line="205" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="2668">
+          <caret line="106" column="54" lean-forward="false" selection-start-line="106" selection-start-column="54" selection-end-line="106" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Desktop/jsoup-1.11.3.jar!/org/jsoup/Connection.class">
+    <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="57" column="15" lean-forward="false" selection-start-line="57" selection-start-column="15" selection-end-line="57" selection-end-column="15" />
+        <state relative-caret-position="29">
+          <caret line="81" column="34" lean-forward="false" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
           <folding>
-            <marker date="1539062227219" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1539062227219" expanded="false" signature="133:439" ph="..." />
-            <marker date="1539062227219" expanded="true" signature="966:984" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="2141:2500" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="2577:2937" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="3012:4198" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="3592:3610" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="3663:3681" ph="/**...*/" />
-            <marker date="1539062227219" expanded="true" signature="4253:4993" ph="{...}" />
-            <marker date="1539062227219" expanded="true" signature="5025:5416" ph="{...}" />
-            <marker date="1539062227219" expanded="false" signature="5277:5292" ph=" { " />
-            <marker date="1539062227219" expanded="false" signature="5315:5325" ph=" }" />
-            <marker date="1539062227219" expanded="false" signature="5365:5380" ph=" { " />
-            <marker date="1539062227219" expanded="false" signature="5400:5410" ph=" }" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/LoginCookieUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1499">
-          <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+        <state relative-caret-position="348">
+          <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#792#793#0" expanded="true" />
             <element signature="e#821#822#0" expanded="true" />
             <element signature="e#857#858#0" expanded="true" />
@@ -1138,34 +936,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/TestWorker.java">
+    <entry file="jar://E:/JDK7 X64/src.zip!/java/io/FileInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        <state relative-caret-position="226">
+          <caret line="145" column="0" lean-forward="false" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/JDK7 X64/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="2790" column="25" lean-forward="false" selection-start-line="2790" selection-start-column="25" selection-end-line="2790" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lkm/ngram/NgramDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding>
+            <element signature="e#166#167#0" expanded="true" />
+            <element signature="e#195#196#0" expanded="true" />
+            <element signature="e#237#238#0" expanded="true" />
+            <element signature="e#269#270#0" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lkm/ngram/DownLoadNgramData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1591">
+          <caret line="58" column="5" lean-forward="false" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/SpiderData.java">
+    <entry file="file://$PROJECT_DIR$/src/com/lkm/ngram/GetFirstNameTypeUnion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-319">
-          <caret line="37" column="29" lean-forward="true" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+        <state relative-caret-position="406">
+          <caret line="78" column="31" lean-forward="false" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lkm/spider/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2091#2099#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1247,7 +1065,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>poi-3.0-FINAL</last-edited>
+          <last-edited>ojdbc14</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
