@@ -1,5 +1,7 @@
 package com.lkm.spider;
 
+import com.lkm.ngram.TransFinalData;
+
 import java.io.IOException;
 import java.util.*;
 
@@ -67,6 +69,86 @@ public class MainController {
         };
         String[] yyj2={"大百科","音乐","祖孝孙","祝凤喈","朱载堉","朱英","朱勤甫","朱践耳","周小燕","周巍峙","周淑安","郑志声","郑译","郑律成","郑京和","赵元任","赵沨","张子谦","张贞黻","张曙","张孔山","张洪岛","喻宜萱","应尚能","殷承宗","姚炳炎","杨仲子","杨元亨","杨荫浏","杨时百","杨嘉仁","严良堃","严老烈","严澂","荀勗","许和子","许常惠","徐天民","徐上瀛","徐祺","萧友梅","向隅","冼星海","武满彻","吴祖强","吴畹卿","吴梦非","吴景略","吴伯超","卫仲乐","王善","王朴","王露","王昆","王光祈","王宾鲁","汪昱庭","万宝常","汤应曾","谭小麟","谭抒真","孙慎","斯义桂","时乐濛","师旷","沈知白","沈肇州","沈亚威","沈心工","沈括","色拉西","三善晃","任光","瞿希贤","瞿维","青主","钱仁康","钱乐之","婆罗多","裴神符","聂耳","缪天瑞","孟波","毛敏仲","麦新","马友友","马思聪","马可","吕文成","吕骥","吕才","罗宗贤","刘天华","刘诗昆","刘德海","伶州鸠","伶伦","林谦三","李元庆","李延年","李廷松","李叔同","李名强","李冕相","李隆基","李凌","李劫夫","李嘉禄","李焕之","李德伦","李翠贞","黎锦晖","黎国荃","雷威","郎毓秀","夔","孔子","康昆仑","京房","姜夔","江文也","江定仙","嵇康","黄自","黄友葵","黄贻钧","黄勉之","桓伊","桓谭","贺绿汀","何柳堂","何承天","郭沔","郭兰英","管平湖","顾圣婴","傅聪","丰子恺","费克","范继森","段善本","杜鸣心","杜夔","丁善德","黛敏郎","戴顒","陈仲儒","陈又新","陈田鹤","陈康士","陈洪","查阜西","曹妙达","蔡元定","蔡邕","蔡绍序","才旦卓玛","伯牙","毕达哥拉","白明达","安来绪","安波","阿炳","华彦钧","苏祗婆","张寒晖"};
         String[] wdj2={"大百科","舞蹈","吴晓邦","赵得贤","戴爱莲","胡果刚","梁伦","贾作光","胡蓉蓉","李承祥","舒巧","崔美善","许淑媖","张均","赵青","陈翘","陈爱莲","白淑湘","阿依吐拉","莫德格玛","刀美兰","林怀民"};
+String[] temp={"苏轼","陆游","王羲之","黄庭坚","李斯","郑板桥","颜真卿","赵孟頫"};
+        String[] sfj_year={"李世民","米芾","贺知章",
+                "张旭","徐渭","刘墉","董其昌","吴昌硕","柳公权","陆机","陶弘景","蔡邕","怀素","解缙","虞世南","李东阳",
+                "傅山","欧阳询","何绍基","褚遂良","赵佶","金农","王献之","王铎","陈继儒","文徵明"};
+
+        String[] sfj_yearTest={"苏轼","陆游","王羲之"};
+        String[] hj_year={
+                "苏轼",
+                "陆游",
+                "王羲之",
+                "黄庭坚",
+                "李斯",
+                "郑板桥",
+                "颜真卿",
+                "赵孟頫",
+                "李世民",
+                "米芾",
+                "贺知章",
+                "张旭",
+                "徐渭",
+                "刘墉",
+                "董其昌",
+                "吴昌硕",
+                "柳公权",
+                "陆机",
+                "陶弘景",
+                "蔡邕",
+                "怀素",
+                "解缙",
+                "虞世南",
+                "李东阳",
+                "傅山",
+                "欧阳询",
+                "何绍基",
+                "褚遂良",
+                "赵佶",
+                "金农",
+                "王献之",
+                "王铎",
+                "陈继儒",
+                "文徵明"
+        };
+
+        String[] wxj_year={
+                "李白",
+                "苏轼",
+                "杜甫",
+                "王安石",
+                "屈原",
+                "曹操",
+                "白居易",
+                "诸葛亮",
+                "韩愈",
+                "陆游",
+                "司马迁",
+                "欧阳修",
+                "柳宗元",
+                "岳飞",
+                "朱熹",
+                "陶渊明",
+                "王维",
+                "刘禹锡",
+                "司马光",
+                "范仲淹",
+                "李清照",
+                "曹雪芹",
+                "杜牧",
+                "辛弃疾",
+                "李商隐",
+                "文天祥",
+                "王羲之",
+                "蒲松龄",
+                "黄庭坚",
+                "纪昀",
+                "孟浩然",
+                "贾谊",
+                "李斯",
+                "袁枚"
+        };
+
         List<Map<String, String>> dataList = new ArrayList<>();
         try {
 
@@ -75,7 +157,7 @@ public class MainController {
                 System.out.println("获取COOKIE失败,请检查验证配置及网络");
                 return;
             }
-            for (String keyWOrd : wdj2) {
+            for (String keyWOrd : sfj_year) {
                 //Thread.sleep(2000);
                 Map<String, String> lastMap = new HashMap<>();
                 lastMap.put("name", keyWOrd);
@@ -87,7 +169,8 @@ public class MainController {
                     Thread.sleep(3000);
                     spiderCount = 0;
                 }
-                Map<String, String> resultMap = parker.spiderDataByOneWord(keyWOrd, "1912-2008");
+                String yearRegion="1912-2008";
+                Map<String, String> resultMap = parker.spiderDataByOneWord(keyWOrd, "1912-1915");
                 //System.out.println(resultMap.toString());
                 Iterator itr = resultMap.entrySet().iterator();
                 while (itr.hasNext()) {
@@ -95,23 +178,23 @@ public class MainController {
                     String key = entry.getKey().toString();
                     String value = entry.getValue().toString();
                     System.out.println(key + "====OK==" + value);
-                    if (key.contains("-")) {
-//                    System.out.println("=========拆分年份线程start======");
-//                    int start = Integer.parseInt(key.split("-")[0]);
-//                    int end = Integer.parseInt(key.split("-")[1]);
-//                    for (int i = start; i < end+1; i++) {
-//                        SpiderData parker2 = new SpiderData(login.getCookie(), login.getLoginBody());
-//                        totalCount++;
-//                        spiderCount++;
-//                        if(spiderCount==1){
-//                            System.out.println("休息10秒");
-//                            Thread.sleep(10000);
-//                            spiderCount=0;
-//                        }
-//                        Map<String, String> yearMap = parker2.spiderDataByOneWord(keyWOrd, String.valueOf(i));
-//                        System.out.println(String.valueOf(i) + "====OK=="+yearMap.get(key));
-//                        lastMap.put(String.valueOf(i), yearMap.get(key));
-//                    }
+                    if (key.contains("-")||true) {
+                    System.out.println("=========拆分年份线程start======");
+                    int start = Integer.parseInt(yearRegion.split("-")[0]);
+                    int end = Integer.parseInt(yearRegion.split("-")[1]);
+                    for (int i = start; i < end+1; i++) {
+                        SpiderData parker2 = new SpiderData(login.getCookie(), login.getLoginBody());
+                        totalCount++;
+                        spiderCount++;
+                        if(spiderCount==1){
+                            System.out.println("休息10秒");
+                            Thread.sleep(4000);
+                            spiderCount=0;
+                        }
+                        Map<String, String> yearMap = parker2.spiderDataByOneWord(keyWOrd, String.valueOf(i));
+                        System.out.println(String.valueOf(i) + "====OK=="+yearMap.get(String.valueOf(i)));
+                        lastMap.put(String.valueOf(i), yearMap.get(String.valueOf(i)));
+                    }
                         lastMap.put(key, value);
                     } else {
                         lastMap.put(key, value);
@@ -125,8 +208,10 @@ public class MainController {
             antiSpriderException.printStackTrace();
         } finally {
             System.out.println("总请求数:" + totalCount);
-            ExcelTransFormer e = new ExcelTransFormer(dataList);
-            e.ExcelTransFormer4Total();
+            //ExcelTransFormer e = new ExcelTransFormer(dataList);
+            //e.ExcelTransFormer4Total();
+            TransFinalData t=new TransFinalData();
+            t.transFinalDataDx(dataList);
         }
     }
 }

@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class TransFinalData {
     private String sql = "select * from ngram_%s where title=?";
@@ -74,6 +75,50 @@ public class TransFinalData {
 
     }
 
+
+    public void transFinalDataDx(List<Map<String, String>> dataList) {
+        File file = new File("D://end.csv");
+        FileOutputStream out = null;
+        OutputStreamWriter osw = null;
+        BufferedWriter bw = null;
+        try {
+            out = new FileOutputStream(file);
+        osw = new OutputStreamWriter(out,"UTF-8");
+        bw = new BufferedWriter(osw);
+        if (dataList != null && !dataList.isEmpty()) {
+            for (Map<String, String> dto : dataList) {
+                for(int i=1912;i<2009;i++){
+                    bw.append(dto.get("name")).append(",").append(String.valueOf(i)).append(",")
+                            .append(dto.get(String.valueOf(i))==null?"0":dto.get(String.valueOf(i))).append("\r");
+                }
+
+            }
+        }
+        bw.close();
+    } catch (Exception e) {
+    }
+
+
+    }
+
+    public void transFinalDataDxTest(List<Map<String, String>> dataList) {
+        File file = new File("D://end.csv");
+        FileOutputStream out = null;
+        OutputStreamWriter osw = null;
+        BufferedWriter bw = null;
+        try {
+            out = new FileOutputStream(file);
+            osw = new OutputStreamWriter(out);
+            bw = new BufferedWriter(osw);
+            bw.append("1").append(",").append("2").append("\r");
+            bw.close();
+
+        } catch (Exception e) {
+        }
+    }
+
+
+
     public static void main(String[] args) {
         TransFinalData t = new TransFinalData();
         List<NgramDto> dtoList = new ArrayList<>();
@@ -81,6 +126,6 @@ public class TransFinalData {
         dto.setSearchWord("Xu Xiake");
         dto.setPrefix("xu");
         dtoList.add(dto);
-        t.transFinalData(dtoList);
+        t.transFinalDataDxTest(null);
     }
 }

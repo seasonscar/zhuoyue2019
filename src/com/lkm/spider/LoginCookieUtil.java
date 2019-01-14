@@ -1,6 +1,9 @@
 package com.lkm.spider;
 
 import java.io.IOException;
+import java.net.Authenticator;
+import java.net.InetSocketAddress;
+import java.net.Proxy;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
@@ -39,8 +42,21 @@ public class LoginCookieUtil {
         }
     }
 
-    private void getLoginCookie() throws IOException {
+    public  class BasicAuthenticator extends Authenticator {
+        String userName;
+        String password;
+
+        public BasicAuthenticator(String userName, String password) {
+            this.userName = userName;
+            this.password = password;
+        }
+    }
+        private void getLoginCookie() throws IOException {
+        Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("xzproxy.cnsuning.com", 8080));
+        Authenticator.setDefault(new BasicAuthenticator("15082188", "5760909lyg?"));
         Connection con = Jsoup.connect(LOGIN_HOME);
+                //.proxy(proxy);
+
         con.header(EXPLORE_Agent, EXPLORE_HEADER);
         Response rs = con.execute();
         Document d1 = Jsoup.parse(rs.body());
@@ -53,6 +69,7 @@ public class LoginCookieUtil {
         }
 
         Connection con2 = Jsoup.connect(LOGIN_URL);
+        //.proxy(proxy);
         con2.header(EXPLORE_Agent, EXPLORE_HEADER);
         Response login = con2.ignoreContentType(true).method(Method.GET).data(datas).cookies(rs.cookies()).execute();
         cookie = login.cookies();

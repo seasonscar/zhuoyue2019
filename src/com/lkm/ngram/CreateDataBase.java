@@ -19,25 +19,7 @@ public class CreateDataBase {
         DataConnection conn = new DataConnection();
         Connection con = conn.getConn();
         for (NgramDto dto : l) {
-            if ("qu".equals(dto.getPrefix()) ||
-                    "du".equals(dto.getPrefix()) ||
-                    "fu".equals(dto.getPrefix()) ||
-                    "ga".equals(dto.getPrefix()) ||
-                    "gu".equals(dto.getPrefix()) ||
-                    "hu".equals(dto.getPrefix()) ||
-                    "ji".equals(dto.getPrefix()) ||
-                    "lu".equals(dto.getPrefix()) ||
-                    "qi".equals(dto.getPrefix()) ||
-                    "wu".equals(dto.getPrefix()) ||
-                    "xi".equals(dto.getPrefix()) ||
-                    "xu".equals(dto.getPrefix()) ||
-                    "ya".equals(dto.getPrefix()) ||
-                    "yi".equals(dto.getPrefix()) ||
-                    "yu".equals(dto.getPrefix()) ||
-                    "zh".equals(dto.getPrefix())
-                    ) {
-                continue;
-            }
+            if ("li".equals(dto.getPrefix())){
             try {
                 String creatsql = String.format(create, dto.getPrefix());
                 Statement stmt = con.createStatement();
@@ -114,6 +96,7 @@ public class CreateDataBase {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+        }
         }
 
     }
