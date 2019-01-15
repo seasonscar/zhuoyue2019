@@ -19,7 +19,7 @@ public class CreateDataBase {
         DataConnection conn = new DataConnection();
         Connection con = conn.getConn();
         for (NgramDto dto : l) {
-            if ("li".equals(dto.getPrefix())){
+            if ("ch".equals(dto.getPrefix())){
             try {
                 String creatsql = String.format(create, dto.getPrefix());
                 Statement stmt = con.createStatement();
@@ -58,7 +58,7 @@ public class CreateDataBase {
                 while ((str = br.readLine()) != null) {
                     total++;
                     for (String f : firstName) {
-                        if (str.startsWith(f + " ") && !str.contains("/") && !str.contains("\"") && !str.contains(";") && !str.contains("^") && !str.contains("-") && !str.contains("'") && !str.contains("=") && !str.contains("_") && !str.contains(".") && !str.contains("?") && !str.contains("鈥")) {
+                        if (str.startsWith(f + " ") && !str.contains("/") && !str.contains("\"") && !str.contains(";") && !str.contains("^") && !str.contains("-") && !str.contains("'") && !str.contains("=") && !str.contains("_") && !str.contains(".") && !str.contains("?") && !str.contains("鈥")&& !str.contains("鈩")&& !str.contains("鈻")) {
                             i++;
                             j++;
                             String[] x1 = str.split("\t");

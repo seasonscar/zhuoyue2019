@@ -70,10 +70,10 @@ public class GetFirstNameTypeUnion {
         //DownLoadNgramData d=new DownLoadNgramData();
         //d.download(l);
         //System.out.println(l.size());
-        CreateDataBase c=new CreateDataBase();
-        c.createDataBase(l);
-        //TransFinalData t=new TransFinalData();
-        //t.transFinalData(searchList);
+        //CreateDataBase c=new CreateDataBase();
+        //c.createDataBase(l);
+        TransFinalData t=new TransFinalData();
+        t.transFinalData(searchList);
 
         long endTime=System.currentTimeMillis(); //获取结束时间
         System.out.println("程序运行时间： "+(endTime-startTime)+"ms");

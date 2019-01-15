@@ -71,6 +71,7 @@ public class SpiderData {
             }
             if (year != "") {
                 datas.put("sectyear", year);
+                datas.put("searchtype", "1");
             }
         }
         Response result = con.ignoreContentType(true).method(Method.GET)

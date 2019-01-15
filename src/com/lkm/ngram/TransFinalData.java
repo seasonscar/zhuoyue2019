@@ -25,7 +25,7 @@ public class TransFinalData {
             NgramDto temp = dtoList.get(i);
             String selectSql = String.format(sql, temp.getPrefix());
             try {
-                System.out.println(i+"===");
+                System.out.println(i + "===");
                 PreparedStatement ps = con.prepareStatement(selectSql);
                 ps.setString(1, temp.getSearchWord());
                 ResultSet rs = ps.executeQuery();
@@ -62,11 +62,11 @@ public class TransFinalData {
             if (retList != null && !retList.isEmpty()) {
                 for (NgramDto dto : retList) {
                     bw.append(dto.getZhName()).append(",")
-                      .append(dto.getTitle()).append(",")
-                      .append(dto.getYear()).append(",")
-                      .append(dto.getNum1()).append(",")
-                      .append(dto.getNum2()).append(",")
-                      .append(dto.getYear()).append("\r");
+                            .append(dto.getTitle()).append(",")
+                            .append(dto.getYear()).append(",")
+                            .append(dto.getNum1()).append(",")
+                            .append(dto.getNum2()).append(",")
+                            .append(dto.getYear()).append("\r");
                 }
             }
         } catch (Exception e) {
@@ -77,28 +77,44 @@ public class TransFinalData {
 
 
     public void transFinalDataDx(List<Map<String, String>> dataList) {
-        File file = new File("D://end.csv");
+        String filename="D://end"+System.currentTimeMillis()+".csv";
+        File file = new File(filename);
+        FileOutputStream out;
+        OutputStreamWriter osw;
+        BufferedWriter bw ;
+        try {
+            out = new FileOutputStream(file);
+            osw = new OutputStreamWriter(out, "UTF-8");
+            bw = new BufferedWriter(osw);
+            if (dataList != null && !dataList.isEmpty()) {
+                for (Map<String, String> dto : dataList) {
+                        bw.append(dto.get("name")).append(",").append(dto.get("year")).append(",")
+                                .append(dto.get("value")== null ? "0" : dto.get("value")).append("\r");
+                }
+            }
+            bw.close();
+        } catch (Exception e) {
+        }
+    }
+
+    public void TransFinalDataDx4Union(List<Map<String, String>> dataList) {
+        String filename="D://end"+System.currentTimeMillis()+".csv";
+        File file = new File(filename);
         FileOutputStream out = null;
         OutputStreamWriter osw = null;
         BufferedWriter bw = null;
         try {
             out = new FileOutputStream(file);
-        osw = new OutputStreamWriter(out,"UTF-8");
-        bw = new BufferedWriter(osw);
-        if (dataList != null && !dataList.isEmpty()) {
-            for (Map<String, String> dto : dataList) {
-                for(int i=1912;i<2009;i++){
-                    bw.append(dto.get("name")).append(",").append(String.valueOf(i)).append(",")
-                            .append(dto.get(String.valueOf(i))==null?"0":dto.get(String.valueOf(i))).append("\r");
+            osw = new OutputStreamWriter(out, "UTF-8");
+            bw = new BufferedWriter(osw);
+            if (dataList != null && !dataList.isEmpty()) {
+                for (Map<String, String> dto : dataList) {
+                    bw.append(dto.get("name")).append(",").append(dto.get("1912-2008")).append(",").append("\r");
                 }
-
             }
+            bw.close();
+        } catch (Exception e) {
         }
-        bw.close();
-    } catch (Exception e) {
-    }
-
-
     }
 
     public void transFinalDataDxTest(List<Map<String, String>> dataList) {
@@ -116,7 +132,6 @@ public class TransFinalData {
         } catch (Exception e) {
         }
     }
-
 
 
     public static void main(String[] args) {
